@@ -6,6 +6,8 @@ from ultralytics import YOLO
 # Add project root to path to import config
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
+# Author: Tarrush Saxena
+
 try:
     from config.animal_config import CARNIVORE_SPECIES, COLOR_CARNIVORE, COLOR_OTHER, CONFIDENCE_THRESHOLD, LINE_THICKNESS
 except ImportError:
@@ -25,9 +27,9 @@ class AnimalEngine:
             self.model = YOLO(model_path)
             
         # If we are using a generic model (yolov8n), we might need to map COCO classes to our expected output 
-        # But user requested "Your model should be capable of distinguishing between different species", implying a custom trained model.
+        # Requirement: "Your model should be capable of distinguishing between different species", implying a custom trained model.
         # For 'yolov8n.pt' (COCO), it detects 'bear', 'zebra', 'giraffe', 'elephant', 'cat' (tiger/lion often misclassified as cat/dog in base model).
-        # We will assume 'models/animal_best.pt' is passed eventually.
+        # Assuming 'models/animal_best.pt' is passed eventually.
 
     def is_carnivore(self, label):
         return label.lower() in CARNIVORE_SPECIES

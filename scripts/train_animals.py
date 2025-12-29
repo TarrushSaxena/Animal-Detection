@@ -5,6 +5,8 @@ import os
 # Add project root
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
+# Author: Tarrush Saxena
+
 def train_model():
     print("Initializing Training...")
     
@@ -23,7 +25,7 @@ def train_model():
     
     # Save the best model to the expected path
     # YOLO saves to models/animal_train/weights/best.pt
-    # We want to copy it to models/animal_best.pt
+    # Copying it to models/animal_best.pt
     
     best_weights = os.path.join("models", "animal_train", "weights", "best.pt")
     target_weights = os.path.join("models", "animal_best.pt")

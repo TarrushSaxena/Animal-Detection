@@ -18,14 +18,14 @@ The dataset contains labeled images properly split into:
 ## ⚙️ Methodology
 
 ### 1. Model Selection
-We utilized **YOLOv8 (You Only Look Once term 8)**, a state-of-the-art object detection model known for its speed and accuracy.
+I utilized **YOLOv8 (You Only Look Once term 8)**, a state-of-the-art object detection model known for its speed and accuracy.
 -   **Architecture**: YOLOv8n (Nano) was chosen for its lightweight nature, allowing for real-time inference on standard hardware.
--   **Transfer Learning**: We leveraged pre-trained COCO weights to speed up convergence and improve feature extraction capabilities.
+-   **Transfer Learning**: I leveraged pre-trained COCO weights to speed up convergence and improve feature extraction capabilities.
 
 ### 2. Preprocessing & Augmentation
 -   **Image Resizing**: All images are resized to 640x640 pixels (standard YOLO input) to ensure consistent input dimensions.
 -   **Feature Scaling**: Pixel values are normalized to the [0, 1] range to facilitate stable training convergence.
--   **Augmentation**: To improve generalization and prevent overfitting, we applied:
+-   **Augmentation**: To improve generalization and prevent overfitting, I applied:
     -   **Mosaic**: Combines 4 training images into one, helping the model learn to detect objects at different scales and context.
     -   **Random brightness/contrast**: Simulates various lighting conditions.
     -   **Horizontal flips**: Increases dataset diversity.
@@ -117,7 +117,7 @@ Below are examples of the model's detections on the validation set, demonstratin
     ```
 
 ### Running Model Analysis
-We have provided a Jupyter Notebook for detailed analysis:
+I have provided a Jupyter Notebook for detailed analysis:
 1.  Navigate to the `notebooks` directory.
 2.  Open `Model_Analysis.ipynb`.
 3.  Run the cells to generate metrics and visualizations.
@@ -134,4 +134,3 @@ python main.py
 
 ## 👨‍💻 Author
 **Tarrush Saxena**
-*Internship Project Task 3*

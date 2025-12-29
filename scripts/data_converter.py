@@ -1,7 +1,9 @@
 """
 Data Converter for Animals Detection Dataset
 This dataset has images organized in class folders (e.g., lion/, tiger/)
-We'll create YOLO format labels assuming each image is a full-frame detection.
+I'll create YOLO format labels assuming each image is a full-frame detection.
+
+Author: Tarrush Saxena
 """
 import os
 import shutil
@@ -85,8 +87,7 @@ def process_dataset():
                     all_images.append((img_path, class_id, folder_name))
     
     if not all_images:
-        print("\nNo matching images found! Let me check what's available...")
-        print("Available folders in dataset:")
+        print("\nNo matching images found. checking available folders in dataset:")
         for item in os.listdir(path):
             item_path = os.path.join(path, item)
             if os.path.isdir(item_path):
