@@ -1,0 +1,15 @@
+names:
+- lion
+- tiger
+- bear
+- elephant
+- zebra
+- giraffe
+- wolf
+- leopard
+- cheetah
+- deer
+nc: 10
+path: C:\Users\tarus\Downloads\Animal_Detection\data\animal_dataset
+train: images/train
+val: images/val

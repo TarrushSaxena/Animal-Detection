@@ -1,0 +1,7 @@
+ultralytics
+opencv-python
+pillow
+kagglehub
+seaborn
+pandas
+matplotlib

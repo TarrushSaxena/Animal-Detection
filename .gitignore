@@ -1,0 +1,24 @@
+# Python and Environment
+.venv/
+__pycache__/
+*.pyc
+.vscode/
+
+# Dataset - Ignore large image folders, keep structure if possible
+data/animal_dataset/images/
+data/animal_dataset/labels/
+# If the dataset is just unorganized in data/
+data/images/
+data/labels/
+data/train/
+data/val/
+data/test/
+
+# Application specific
+runs/
+dist/
+build/
+*.egg-info/
+
+# Large files (optional, but good practice if model > 100MB, nano is small so we keep)
+# *.pt
